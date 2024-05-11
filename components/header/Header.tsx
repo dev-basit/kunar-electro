@@ -1,5 +1,6 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Menu from "./Menu";
 
 function Header() {
   return (
@@ -9,18 +10,7 @@ function Header() {
           <Link href="/" className="btn btn-ghost text-lg">
             Kunar Electro
           </Link>
-          <ul className="flex">
-            <li>
-              <Link href="/cart" className="btn btn-ghost rounded-btn">
-                Cart
-              </Link>
-            </li>
-            <li>
-              <Link href="/signin" className="btn btn-ghost rounded-btn">
-                Sign in
-              </Link>
-            </li>
-          </ul>
+          <Menu />
         </div>
       </nav>
     </header>

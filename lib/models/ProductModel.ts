@@ -1,4 +1,4 @@
-export type Product = {
+export interface InteraceProduct {
   _id?: string;
   name: string;
   slug: string;
@@ -13,4 +13,4 @@ export type Product = {
   countInStock: number;
   colors?: [];
   sizes?: [];
-};
+}
