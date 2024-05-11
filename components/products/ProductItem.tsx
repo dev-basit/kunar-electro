@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/lib/models/ProductModel";
+import { InteraceProduct } from "@/lib/models/ProductModel";
 
 interface InterfaceProductItemProps {
-  product: Product;
+  product: InteraceProduct;
 }
 
 export default function ProductItem({ product }: InterfaceProductItemProps) {
