@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { round } from "../utils/utils";
 import { InterfaceOrderItem } from "../models/OrderModel";
+import { persist } from "zustand/middleware";
 
 interface IntefaceCart {
   items: InterfaceOrderItem[];
@@ -18,7 +19,11 @@ const initialState: IntefaceCart = {
   totalPrice: 0,
 };
 
-export const cartStore = create<IntefaceCart>(() => initialState);
+export const cartStore = create<IntefaceCart>()(
+  persist(() => initialState, {
+    name: "cartStore",
+  })
+);
 
 export default function useCartService() {
   const { items, itemsPrice, taxPrice, shippingPrice, totalPrice } = cartStore();
