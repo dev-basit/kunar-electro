@@ -76,15 +76,15 @@ export default function Form() {
           </div>
         </form>
 
-        <div className="divider"> OR </div>
+        {/* <div className="divider"> OR </div>
         <button onClick={() => signIn("github", { callbackUrl })} className="btn">
           Continue with Github
-        </button>
+        </button> */}
         <div className="divider"> </div>
         <div>
           Need an account?
           <Link className="link" href={`/register?callbackUrl=${callbackUrl}`}>
-            Register
+            {" Register"}
           </Link>
         </div>
       </div>
