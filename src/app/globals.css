@@ -1,0 +1,146 @@
+@import "./normalize.css";
+
+:root {
+  --color-primary: #f15c28;
+  --color-secondary: #163754;
+  --color-secondary-darker: #09253e;
+  --color-body: #535862;
+  --color-body-darker: #181d27;
+  --color-gray: #717680;
+  --color-gray-light: #a8a8a8;
+  --color-white: #ffffff;
+  --border-color: #e9eaeb;
+  --border-color-dark: #d5d7da;
+  --navbar-height: 10rem;
+  --border-radius-sm: 10px;
+  --border-radius-med: 15px;
+  --border-radius-lg: 20px;
+  --body-content-width: 100vw;
+}
+
+html {
+  font-size: 20px;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary-darker);
+    border-radius: 8px;
+  }
+}
+
+body {
+  color: var(--color-body);
+  background: var(--white);
+  font-family: var(--rubik), Inter, Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  max-width: var(--body-content-width);
+  margin: 0 auto;
+  padding: 0px 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+pre {
+  font-family: inherit;
+}
+
+span {
+  color: var(--color-primary);
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  border-color: var(--border-color);
+  border-radius: var(--border-radius-sm);
+}
+
+input::placeholder {
+  font-size: 1.5rem;
+  color: var(--color-gray-light);
+}
+
+button {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1720px) {
+  :root {
+    --body-content-width: 85vw;
+    --navbar-height: 11rem;
+  }
+
+  html {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1980px) {
+  :root {
+    --body-content-width: 65vw;
+    --navbar-height: 11rem;
+  }
+
+  html {
+    font-size: 40px;
+  }
+}
